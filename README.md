@@ -1,4 +1,4 @@
-# mozilla-iot-lumencache
+# Mozilla-IoT WebThings adapter for LumenCache
 LumenCache LibRE EGW1 add-on for Mozilla-IoT
 
 LumenCache is a DC power and control infrastructure for new construction.
