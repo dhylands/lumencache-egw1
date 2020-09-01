@@ -1,0 +1,38 @@
+{
+  "author": "LumenCache",
+  "description": "LumenCache EGW1 Adapter",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/dcowburn/lumencache-egw1",
+  "id": "lumencache-egw1",
+  "license": "GPL-3.0",
+  "manifest_version": 1,
+  "name": "EGW1",
+  "options": {
+    "default": {
+      "port": "/dev/ttyAMA0",
+      "debug": ""
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "port": {
+          "type": "string",
+          "default": "/dev/ttyAMA0"
+        },
+        "debug": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    }
+  },
+  "short_name": "EGW1",
+  "version": "0.1.0"
+}

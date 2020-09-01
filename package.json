@@ -1,0 +1,84 @@
+{
+  "name": "lumencache-egw1",
+  "display_name": "LumenCache EGW1",
+  "version": "0.1.0",
+  "description": "LumenCache EGW1 Adapter",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "jest": "jest --coverage",
+    "test": "eslint . && jest --coverage"
+  },
+  "keywords": [
+    "mozilla",
+    "iot",
+    "adapter",
+    "lumencache"
+  ],
+  "author": "LunmenCache",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/dcowburn/lumencache-egw1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcowburn/lumencache-egw1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dcowburn/lumencache-egw1/issues"
+  },
+  "dependencies": {
+    "net": "^1.0.2",
+    "serialport": "^7.1.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "gateway-addon": "https://github.com/mozilla-iot/gateway-addon-node",
+    "jest": "^26.1.0"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "SHA256SUMS",
+    "index.js",
+    "egw1-adapter.js",
+    "egw1-debug.js",
+    "manifest.json"
+  ],
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testMatch": [
+      "**/tests/**/*-test.js"
+    ],
+    "testEnvironment": "node"
+  },
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "config": {
+      "port": "/dev/ttyAMA0",
+      "debug": ""
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "properties": {
+          "port": {
+            "type": "string",
+            "default": "/dev/ttyAMA0"
+          },
+          "debug": {
+            "type": "string",
+            "default": ""
+          }
+        }
+      }
+    }
+  }
+}
